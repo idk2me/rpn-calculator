@@ -54,7 +54,7 @@ func Calc(expr string) (int, error) {
 
 			tmp := structs.Token{
 				Kind:  structs.INT,
-				Value: ops[v.Op](a.Value, b.Value),
+				Value: ops[v.Op](b.Value, a.Value),
 			}
 			s.Push(tmp)
 		}
